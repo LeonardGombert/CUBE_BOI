@@ -114,9 +114,9 @@
 		   float outline = normalDifference + depthDifference;
 		   float4 sourceColor = tex2D(_MainTex, i.uv);
 		   //color = step(_StepValue, sourceColor);
-		   float4 color = lerp(sourceColor, _OutlineColor, outline);
-		   color = step(_StepValue, color);
-		   return color * _AddColor;
+		   //float4 color = lerp(sourceColor, _OutlineColor, outline);
+		   //float4 color = step(_StepValue, sourceColor);
+		   return sourceColor * _AddColor;
 	   }
 	   ENDCG
    }
