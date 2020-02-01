@@ -4,6 +4,7 @@
 		Properties{
 			_Color("Tint", Color) = (0, 0, 0, 1)
 			_MainTex("Texture", 2D) = "white" {}
+			_NoiseTex("_NoiseTex", 2D) = "white" {}
 			[HDR] _Emission("Emission", color) = (0,0,0)
 
 			_HalftonePattern("Halftone Pattern", 2D) = "white" {}
@@ -19,17 +20,16 @@
 			_RemapOutputMin2("Remap output min value2", Range(0, 1)) = 0
 			_RemapOutputMax2("Remap output max value2", Range(0, 1)) = 1
 
-		_NoiseTex("_NoiseTex (RGB)", 2D) = "white" {}
-		_Value("Value", Float) = 1
-		_Speed("_Speed", Float) = 1
-		_Outline("_Outline", Range(0,0.01)) = 0
+		[PerRendererData]_Value("Value", Float) = 1
+		[PerRendererData]_Speed("_Speed", Float) = 1
+		[PerRendererData]_Outline("_Outline", Range(0,0.01)) = 0
 		_OutlineColor("Color", Color) = (1, 1, 1, 1)
-		_Width("Width", float) = 5
+		[PerRendererData] _Width("Width", float) = 5
 
-			_Test1("_Test1", float) = 1
-			_Test2("_Test2", float) = 1
+			[PerRendererData]_Test1("_Test1", float) = 1
+			[PerRendererData]_Test2("_Test2", float) = 1
 
-			_Disorder("Disorder", float) = 0
+			[PerRendererData]_Disorder("Disorder", float) = 0
 
 		}
 			SubShader{
@@ -74,6 +74,13 @@
 
 				float _Disorder;
 
+				float _Test1;
+				float _Test2;
+				float _Value;
+				float _Speed;
+				float _Width;
+				float4 _OutlineColor;
+				sampler2D _NoiseTex;
 
 				//struct that holds information that gets transferred from surface to lighting function
 				struct HalftoneSurfaceOutput {
@@ -132,13 +139,6 @@
 					return col;
 				}
 
-				float _Test1;
-				float _Test2;
-				float _Value;
-				float _Speed;
-				float _Width;
-				float4 _OutlineColor;
-				sampler2D _NoiseTex;
 
 				void vert(inout appdata_full v) {
 					float4 n = tex2Dlod(_NoiseTex, float4(v.texcoord.xy, 0, 0));
@@ -187,6 +187,17 @@
 
 					#include "UnityCG.cginc"
 
+
+				float _Value;
+				float _Outline;
+				float _Speed;
+				float _Width;
+				float _Disorder;
+				float4 _OutlineColor;
+				sampler2D _NoiseTex;
+				sampler2D _GrabTexture;
+
+
 				struct appdata
 				{
 					float4 vertex : POSITION;
@@ -201,15 +212,6 @@
 					float4 vertex : SV_POSITION;
 					float4 uvgrab : TEXCOORD1;
 				};
-
-				float _Value;
-				float _Outline;
-				float _Speed;
-				float _Width;
-				float _Disorder;
-				float4 _OutlineColor;
-				sampler2D _NoiseTex;
-				sampler2D _GrabTexture;
 
 				v2f vert(appdata v)
 				{
