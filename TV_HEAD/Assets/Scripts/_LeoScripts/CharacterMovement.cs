@@ -18,12 +18,10 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * y;
+        Vector3 move = transform.right * x + transform.forward * z;
 
-        characterController.Move(transform.forward * speed * Time.deltaTime);
-
-        //transform.position = transform.forward * speed * Time.deltaTime;
+        characterController.Move(move * speed * Time.deltaTime);
     }
 }
