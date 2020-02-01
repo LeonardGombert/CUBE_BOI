@@ -111,6 +111,7 @@ public class MovementInput : MonoBehaviour {
 
 		//Calculate the Input Magnitude
 		Speed = new Vector2(InputX, InputZ).sqrMagnitude;
+		Speed = 12f;
 
         //Physically move player
 
