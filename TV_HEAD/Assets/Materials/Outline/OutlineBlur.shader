@@ -18,6 +18,11 @@
 		   ZWrite Off
 		   ZTest Always
 
+		GrabPass
+		{
+			"_GrabTexture"
+		}
+
 		   Pass{
 			   CGPROGRAM
 			   //include useful shader functions
@@ -42,6 +47,7 @@
 	   float _DepthMult;
 	   float _DepthBias;
 	   float _StepValue;
+	   sampler2D _GrabTexture;
 
 	   //the object data that's put into the vertex shader
 	   struct appdata {
@@ -53,6 +59,7 @@
 	   struct v2f {
 		   float4 position : SV_POSITION;
 		   float2 uv : TEXCOORD0;
+		   float4 uvgrab : TEXCOORD1;
 	   };
 
 	   //the vertex shader
@@ -113,10 +120,11 @@
 
 		   float outline = normalDifference + depthDifference;
 		   float4 sourceColor = tex2D(_MainTex, i.uv);
+		   fixed4 grab = tex2D(_GrabTexture, i.uvgrab);
 		   //color = step(_StepValue, sourceColor);
-		   //float4 color = lerp(sourceColor, _OutlineColor, outline);
+		   float4 color = lerp(sourceColor, _OutlineColor, outline);
 		   //float4 color = step(_StepValue, sourceColor);
-		   return sourceColor * _AddColor;
+		   return color * _AddColor;
 	   }
 	   ENDCG
    }
