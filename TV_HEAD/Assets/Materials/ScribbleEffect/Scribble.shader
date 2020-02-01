@@ -7,12 +7,17 @@
 			[HDR] _Emission("Emission", color) = (0,0,0)
 
 			_HalftonePattern("Halftone Pattern", 2D) = "white" {}
+			_HalftonePattern2("Halftone Pattern 2 ", 2D) = "white" {}
 
 			_RemapInputMin("Remap input min value", Range(0, 1)) = 0
 			_RemapInputMax("Remap input max value", Range(0, 1)) = 1
 			_RemapOutputMin("Remap output min value", Range(0, 1)) = 0
 			_RemapOutputMax("Remap output max value", Range(0, 1)) = 1
 
+			_RemapInputMin2("Remap input min value2", Range(0, 1)) = 0
+			_RemapInputMax2("Remap input max value2", Range(0, 1)) = 1
+			_RemapOutputMin2("Remap output min value2", Range(0, 1)) = 0
+			_RemapOutputMax2("Remap output max value2", Range(0, 1)) = 1
 
 		_NoiseTex("_NoiseTex (RGB)", 2D) = "white" {}
 		_Value("Value", Float) = 1
@@ -20,6 +25,9 @@
 		_Outline("_Outline", Range(0,0.01)) = 0
 		_OutlineColor("Color", Color) = (1, 1, 1, 1)
 		_Width("Width", float) = 5
+
+			_Test1("_Test1", float) = 1
+			_Test2("_Test2", float) = 1
 
 		}
 			SubShader{
@@ -48,6 +56,8 @@
 				//shading properties
 				sampler2D _HalftonePattern;
 				float4 _HalftonePattern_ST;
+				sampler2D _HalftonePattern2;
+				float4 _HalftonePattern2_ST;
 
 				///remapping values
 				float _RemapInputMin;
@@ -55,6 +65,10 @@
 				float _RemapOutputMin;
 				float _RemapOutputMax;
 
+				float _RemapInputMin2;
+				float _RemapInputMax2;
+				float _RemapOutputMin2;
+				float _RemapOutputMax2;
 
 
 				//struct that holds information that gets transferred from surface to lighting function
@@ -64,6 +78,7 @@
 					half3 Emission;
 					fixed Alpha;
 					fixed3 Normal;
+					float2 uv_MainTex;
 				};
 
 				// This function remaps values from a input to a output range
@@ -74,6 +89,13 @@
 					//lerp with output range
 					return lerp(outMin, outMax, relativeValue);
 				}
+
+				//input struct which is automatically filled by unity
+				struct Input {
+					float2 uv_MainTex;
+					float2 uv;
+					float4 screenPos;
+				};
 
 				//our lighting function. Will be called once per light
 				float4 LightingHalftone(HalftoneSurfaceOutput s, float3 lightDir, float atten) {
@@ -86,11 +108,15 @@
 
 					//get halftone comparison value
 					float halftoneValue = tex2D(_HalftonePattern, s.ScreenPos).r;
+					float halftoneValueTwo = tex2D(_HalftonePattern2, s.ScreenPos).r;
 
 					//make lightness binary between fully lit and fully shadow based on halftone pattern (with a bit of antialiasing between)
 					halftoneValue = map(halftoneValue, _RemapInputMin, _RemapInputMax, _RemapOutputMin, _RemapOutputMax);
+					halftoneValueTwo = map(halftoneValueTwo, _RemapInputMin2, _RemapInputMax2, _RemapOutputMin2, _RemapOutputMax2);
 					float halftoneChange = fwidth(halftoneValue) * 0.5;
-					lightIntensity = smoothstep(halftoneValue - halftoneChange, halftoneValue + halftoneChange, lightIntensity);
+					float halftoneChangeTwo = fwidth(halftoneValueTwo) * 0.5;
+					lightIntensity = smoothstep(halftoneValue - halftoneChange, halftoneValue + halftoneChange, lightIntensity)
+									* smoothstep(halftoneValueTwo - halftoneChangeTwo, halftoneValueTwo + halftoneChangeTwo, lightIntensity);
 
 					//combine the color
 					float4 col;
@@ -102,12 +128,8 @@
 					return col;
 				}
 
-				//input struct which is automatically filled by unity
-				struct Input {
-					float2 uv_MainTex;
-					float4 screenPos;
-				};
-
+				float _Test1;
+				float _Test2;
 				float _Value;
 				float _Speed;
 				float _Width;
@@ -128,9 +150,15 @@
 
 					o.Emission = _Emission;
 
+					float4 n = tex2Dlod(_NoiseTex, float4(i.uv_MainTex.xy, 0, 0));
+					_HalftonePattern_ST.xy = ((sin(_Time.y * 30) + 1) * 0.5) * n.r * _Test1 + _Test2;
+					_HalftonePattern_ST.zw = step( 0.1,((sin(_Time.y * 10 ) + 1) * 0.5) * n.r * 0.5);
+					//_HalftonePattern_ST.xy = 4;
+
+
 					//setup screenspace UVs for lighing function
 					float aspect = _ScreenParams.x / _ScreenParams.y;
-					o.ScreenPos = i.screenPos.xy / i.screenPos.w;
+					o.ScreenPos = i.uv_MainTex.xy;
 					o.ScreenPos = TRANSFORM_TEX(o.ScreenPos, _HalftonePattern);
 					o.ScreenPos.x = o.ScreenPos.x * aspect;
 				}
