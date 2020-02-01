@@ -29,6 +29,8 @@
 			_Test1("_Test1", float) = 1
 			_Test2("_Test2", float) = 1
 
+			_Disorder("Disorder", float) = 0
+
 		}
 			SubShader{
 				//the material is completely non-transparent and is rendered at the same time as the other opaque geometry
@@ -46,7 +48,7 @@
 				#pragma surface surf Halftone fullforwardshadows vertex:vert addshadow
 				//#pragma surface surf Lambert vertex:vert
 				//#pragma addshadow 
-				#pragma target 5.0
+				#pragma target 4.0
 
 				//basic properties
 				sampler2D _MainTex;
@@ -69,6 +71,8 @@
 				float _RemapInputMax2;
 				float _RemapOutputMin2;
 				float _RemapOutputMax2;
+
+				float _Disorder;
 
 
 				//struct that holds information that gets transferred from surface to lighting function
@@ -138,7 +142,7 @@
 
 				void vert(inout appdata_full v) {
 					float4 n = tex2Dlod(_NoiseTex, float4(v.texcoord.xy, 0, 0));
-					v.vertex.xyz += v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value;
+					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value, v.normal * ((sin(_Time.y * _Speed * 10 * n) + 1) * 0.5) * _Value * 10, _Disorder);
 				}
 
 				//the surface shader function which sets parameters the lighting function then uses
@@ -202,6 +206,7 @@
 				float _Outline;
 				float _Speed;
 				float _Width;
+				float _Disorder;
 				float4 _OutlineColor;
 				sampler2D _NoiseTex;
 				sampler2D _GrabTexture;
@@ -224,7 +229,7 @@
 					v.vertex += float4(projectedNormal, 0);
 
 					float4 n = tex2Dlod(_NoiseTex, float4(v.uv.xy, 0, 0));
-					v.vertex.xyz += v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline;
+					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline, v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline * 10 , _Disorder);
 
 					o.vertex = UnityObjectToClipPos(v.vertex);
 					UNITY_TRANSFER_FOG(o,o.vertex);
