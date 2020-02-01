@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e10c7f9ae5073014ca820c3f35bf9551, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -82,10 +82,10 @@ Material:
     - _RemapOutputMin: 0.566
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 1
+    - _Speed: 3.84
     - _SrcBlend: 1
     - _UVSec: 0
-    - _Value: 1
+    - _Value: 100
     - _Width: 5
     - _ZWrite: 1
     m_Colors:

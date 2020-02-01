@@ -115,6 +115,12 @@
 				float _RemapOutputMin;
 				float _RemapOutputMax;
 
+				float _Value;
+				float _Speed;
+				float _Width;
+				float4 _OutlineColor;
+				sampler2D _NoiseTex;
+
 				//struct that holds information that gets transferred from surface to lighting function
 				struct HalftoneSurfaceOutput {
 					fixed3 Albedo;
@@ -165,6 +171,11 @@
 					float2 uv_MainTex;
 					float4 screenPos;
 				};
+
+				void vert(inout appdata_full v) {
+					float4 n = tex2Dlod(_NoiseTex, float4(v.texcoord.xy, 0, 0));
+					v.vertex.xyz += v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value;
+				}
 
 				//the surface shader function which sets parameters the lighting function then uses
 				void surf(Input i, inout HalftoneSurfaceOutput o) {
