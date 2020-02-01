@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/_LeoRiggingScene.unity
+    guid: 2b87c7fde18e8fd458ccb1a24a32578a
   m_configObjects: {}

@@ -283,3 +283,21 @@ MonoBehaviour:
     Background: {fileID: 0}
     IsBackgroundRecursive: 0
     IsBackgroundCustom: 0
+  - Type: 1
+    Key: Assets/Resources/Unity
+    SmallIcon: {fileID: 2800000, guid: 489341bce0bb2fe49bd363e618c3926f, type: 3}
+    LargeIcon: {fileID: 2800000, guid: c823925e50e417644914e811d2dab468, type: 3}
+    IsIconRecursive: 0
+    IsIconCustom: 0
+    Background: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsBackgroundCustom: 0
+  - Type: 1
+    Key: Assets/Graphs/Models
+    SmallIcon: {fileID: 2800000, guid: 268edea26d8cd504da659cc71a1d8549, type: 3}
+    LargeIcon: {fileID: 2800000, guid: e69e4447e8078c441b3a955855f4f080, type: 3}
+    IsIconRecursive: 0
+    IsIconCustom: 0
+    Background: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsBackgroundCustom: 0
