@@ -20,7 +20,7 @@ public class N : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        matProp.SetFloat("_Amount", _Amount);
-        rend.SetPropertyBlock(matProp);
+        //matProp.SetFloat("_Amount", _Amount);
+        //rend.SetPropertyBlock(matProp);
     }
 }

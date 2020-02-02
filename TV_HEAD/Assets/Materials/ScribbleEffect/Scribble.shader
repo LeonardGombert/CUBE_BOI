@@ -35,6 +35,7 @@ Shader "Custom/Shadow/Scribble"
 
 			[PerRendererData]_Test1("_Test1", float) = 1
 			[PerRendererData]_Test2("_Test2", float) = 1
+			[PerRendererData]_Test3("_Test3", float) = 1
 
 			[PerRendererData]_Disorder("Disorder", float) = 0
 			[PerRendererData]_DirectionDisorder("_DirectionDisorder", Vector) = (1,1,1,1)
@@ -88,6 +89,7 @@ Shader "Custom/Shadow/Scribble"
 
 				float _Test1;
 				float _Test2;
+				float _Test3;
 				float _Value;
 				float _Speed;
 				float _Width;
@@ -173,7 +175,7 @@ Shader "Custom/Shadow/Scribble"
 
 					float4 n = tex2Dlod(_NoiseTex, float4(i.uv_MainTex.xy, 0, 0));
 					_HalftonePattern_ST.xy = ((sin(_Time.y * 30) + 1) * 0.5) * n.r * _Test1 + _Test2;
-					_HalftonePattern_ST.zw = step( 0.1,((sin(_Time.y * 10 ) + 1) * 0.5) * n.r * 0.5);
+					_HalftonePattern_ST.zw = step( 0.1,((sin(_Time.y * 10 ) + 1) * 0.5) * n.r * 0.5) * _Test3;
 					//_HalftonePattern_ST.xy = 4;
 
 
