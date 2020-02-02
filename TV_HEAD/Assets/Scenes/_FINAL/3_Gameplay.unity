@@ -9617,7 +9617,7 @@ PrefabInstance:
     - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
         type: 3}
       propertyPath: _Disorder
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
         type: 3}
@@ -9627,7 +9627,7 @@ PrefabInstance:
     - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
         type: 3}
       propertyPath: _DirectionDisorderAmp
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
         type: 3}
