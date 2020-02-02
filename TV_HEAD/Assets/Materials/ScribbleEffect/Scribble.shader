@@ -37,6 +37,8 @@ Shader "Custom/Shadow/Scribble"
 			[PerRendererData]_Test2("_Test2", float) = 1
 			[PerRendererData]_Test3("_Test3", float) = 1
 
+			[PerRendererData]_RotationHead("_RotationHead", float) = 1
+
 			[PerRendererData]_Disorder("Disorder", float) = 0
 			[PerRendererData]_DirectionDisorderAmp("_DirectionDisorderAmp", float) = 0
 			[PerRendererData]_DirectionDisorder("_DirectionDisorder", Vector) = (1,1,1,1)
@@ -87,6 +89,7 @@ Shader "Custom/Shadow/Scribble"
 				float _RemapOutputMax2;
 
 				float _Disorder;
+				float _RotationHead;
 
 				float _Test1;
 				float _Test2;
@@ -163,7 +166,7 @@ Shader "Custom/Shadow/Scribble"
 					float4 n = tex2Dlod(_NoiseTex, float4(v.texcoord.xy, 0, 0));
 					float3 worldNormal = normalize(mul(v.normal, (float3x3)unity_ObjectToWorld));
 					_DirectionDisorder.xyz = mul(unity_WorldToObject, _DirectionDisorder).xyz;
-					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value, ((worldNormal - _DirectionDisorder)* _DirectionDisorderAmp) * ((sin(_Time.y * _Speed * 10 * n) + 1) * 0.5) * _Value * 10, _Disorder);
+					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value, (((worldNormal - _DirectionDisorder)* _DirectionDisorderAmp * abs(_RotationHead)) * -1) * ((sin(_Time.y * _Speed * 10 * n) + 1) * 0.5) * _Value * 10, _Disorder);
 				}
 
 				//the surface shader function which sets parameters the lighting function then uses
@@ -222,6 +225,7 @@ Shader "Custom/Shadow/Scribble"
 				sampler2D _NoiseTex;
 				sampler2D _GrabTexture;
 				float _DirectionDisorderAmp;
+				float _RotationHead;
 
 
 				struct appdata
@@ -259,7 +263,7 @@ Shader "Custom/Shadow/Scribble"
 					float4 n = tex2Dlod(_NoiseTex, float4(v.uv.xy, 0, 0));
 					float3 worldNormal = normalize(mul(v.normal, (float3x3)unity_ObjectToWorld));
 					_DirectionDisorder.xyz = mul(unity_WorldToObject, _DirectionDisorder).xyz;
-					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline, ((worldNormal - _DirectionDisorder)* _DirectionDisorderAmp) * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline * 10 , _Disorder);
+					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline, (((worldNormal - _DirectionDisorder)* _DirectionDisorderAmp * abs(_RotationHead)) * -1) * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline * 10 , _Disorder);
 
 					o.vertex = UnityObjectToClipPos(v.vertex);
 					UNITY_TRANSFER_FOG(o,o.vertex);
