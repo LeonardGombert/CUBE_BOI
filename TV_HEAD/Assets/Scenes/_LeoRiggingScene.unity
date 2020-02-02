@@ -626,7 +626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &534104898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4494,10 +4494,12 @@ MonoBehaviour:
   rotateAroundSpeed2: 2
   localRotation: {x: 0, y: 0, z: 0, w: 0}
   height: 0
+  height1: 0
+  height2: 0
   angleLimit: 30
   rotationAmount: 0
   radius: 4
-  toMove: {fileID: 0}
+  toMove: {fileID: 126938633}
   timePassed: 0
   startPosition: 0
   endPosition: 0
