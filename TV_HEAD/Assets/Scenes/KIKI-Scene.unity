@@ -636,7 +636,7 @@ MonoBehaviour:
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
-  _Disorder: 0
+  _Disorder: 10
   _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
   _DirectionDisorderPos: {fileID: 1083200333}
 --- !u!1 &1068527140 stripped

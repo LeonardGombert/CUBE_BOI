@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class CharacterMovement : MonoBehaviour
 {
     CharacterController characterController;
+
+    [SerializeField] MaterialProp matPropHead;
+
+    [Space(30)]
     [SerializeField] float speed = 12f;
     [SerializeField] float rotateSpeed = 12f;
     [SerializeField] float rotateAroundSpeed = 45f;
@@ -72,6 +76,9 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        matPropHead._RotationHead = rotationAmount;
+
         MyAngle();
         MyShpere();
         toMove.transform.position = new Vector3(transform.localPosition.x + rotationAmount, transform.localPosition.y + Mathf.Sqrt(Mathf.Pow(radius, 2) - Mathf.Pow(rotationAmount, 2)), transform.localPosition.z);

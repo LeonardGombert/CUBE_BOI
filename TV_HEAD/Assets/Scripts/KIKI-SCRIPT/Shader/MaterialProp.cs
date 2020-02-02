@@ -21,8 +21,10 @@ public class MaterialProp : MonoBehaviour
 
     [Space(10)]
     public bool isDisordered = false;
+    public float _DirectionDisorderAmp;
     public Vector4 _DirectionDisorder;
     public Transform _DirectionDisorderPos;
+    public float _RotationHead;
 
     void Start()
     {
@@ -33,10 +35,14 @@ public class MaterialProp : MonoBehaviour
     void Update()
     {
 
+
+
         if (isDisordered == true)
         {
             _DirectionDisorder = _DirectionDisorderPos.localPosition;
             m_PropertyBlock.SetFloat("_Disorder", _Disorder);
+            m_PropertyBlock.SetFloat("_RotationHead", _RotationHead);
+            m_PropertyBlock.SetFloat("_DirectionDisorderAmp", _DirectionDisorderAmp);
             m_PropertyBlock.SetVector("_DirectionDisorder", _DirectionDisorder);
         }
 
@@ -48,7 +54,6 @@ public class MaterialProp : MonoBehaviour
         m_PropertyBlock.SetFloat("_Test1", _Test1);
         m_PropertyBlock.SetFloat("_Test2", _Test2);
         m_PropertyBlock.SetFloat("_Test3", _Test3);
-
 
         myRenderer.SetPropertyBlock(m_PropertyBlock);
     }
