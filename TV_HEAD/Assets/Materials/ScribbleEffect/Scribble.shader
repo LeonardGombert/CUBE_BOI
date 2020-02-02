@@ -36,6 +36,7 @@ Shader "Custom/Shadow/Scribble"
 			[PerRendererData]_Test1("_Test1", float) = 1
 			[PerRendererData]_Test2("_Test2", float) = 1
 			[PerRendererData]_Test3("_Test3", float) = 1
+			_Tilling("_Tilling", float) = 1
 
 			[PerRendererData]_RotationHead("_RotationHead", float) = 1
 
@@ -90,6 +91,7 @@ Shader "Custom/Shadow/Scribble"
 
 				float _Disorder;
 				float _RotationHead;
+				float _Tilling;
 
 				float _Test1;
 				float _Test2;
@@ -179,8 +181,9 @@ Shader "Custom/Shadow/Scribble"
 					o.Emission = _Emission;
 
 					float4 n = tex2Dlod(_NoiseTex, float4(i.uv_MainTex.xy, 0, 0));
-					_HalftonePattern_ST.xy = ((sin(_Time.y * 30) + 1) * 0.5) * n.r * _Test1 + _Test2;
-					_HalftonePattern_ST.zw = step( 0.1,((sin(_Time.y * 10 ) + 1) * 0.5) * n.r * 0.5) * _Test3;
+					_HalftonePattern_ST.xy = _Tilling;
+					_HalftonePattern_ST.xy += ((sin(_Time.y * 30) + 1) * 0.5) * n.r * _Test1 + _Test2;
+					_HalftonePattern_ST.zw += step( 0.1,((sin(_Time.y * 10 ) + 1) * 0.5) * n.r * 0.5) * _Test3;
 					//_HalftonePattern_ST.xy = 4;
 
 
