@@ -36,4 +36,19 @@ public class TweenManager : MonoBehaviour
     {
         return -change / 2 * (Mathf.Cos(Mathf.PI * time / duration) - 1) + beginning;
     }
+
+    public static float EaseInExpo(float time, float beginning, float change, float duration)
+    {
+        return change * Mathf.Pow(2, 10 * (time/duration - 1)) + beginning;
+    }
+    public static float EaseOutExpo(float time, float beginning, float change, float duration)
+    {
+        return change * (-Mathf.Pow(2, -10 * time / duration) + 1) + beginning;
+    }
+    public static float EaseInOutExpo(float time, float beginning, float change, float duration)
+    {
+        if((time /= duration/2) < 1)
+            return change / 2 * Mathf.Pow(2, 10 * (time - 1)) + beginning;
+        return change / 2 * (-Mathf.Pow(2, -10 * --time) + 2) + beginning;
+    }
 }
