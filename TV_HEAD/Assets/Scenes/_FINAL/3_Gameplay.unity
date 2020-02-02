@@ -1069,9 +1069,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -2202,9 +2202,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -2389,9 +2389,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -2596,9 +2596,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -3034,9 +3034,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -3333,9 +3333,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -3557,9 +3557,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -4038,9 +4038,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -4419,9 +4419,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -4667,9 +4667,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -4992,9 +4992,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -5104,9 +5104,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -5850,9 +5850,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -6241,9 +6241,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -6322,9 +6322,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -6552,9 +6552,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -6753,9 +6753,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -7115,9 +7115,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -7672,9 +7672,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -8448,9 +8448,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -8473,9 +8473,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -8834,9 +8834,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -9368,6 +9368,115 @@ MonoBehaviour:
   _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
   _DirectionDisorderPos: {fileID: 0}
   _RotationHead: 0
+--- !u!1 &1618650521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618650525}
+  - component: {fileID: 1618650524}
+  - component: {fileID: 1618650523}
+  - component: {fileID: 1618650522}
+  - component: {fileID: 1618650526}
+  m_Layer: 0
+  m_Name: YES
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1618650522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618650521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1618650523
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618650521}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1618650524
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618650521}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1618650525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618650521}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.04, y: -30.96, z: 124.5}
+  m_LocalScale: {x: 107.76569, y: 28.03125, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1618650526
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618650521}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1621556907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7937639134526729970, guid: 816ad3c0596e05b43b0981e6a21b33c7,
@@ -9529,6 +9638,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Igor_RIG FINAL
       objectReference: {fileID: 0}
+    - target: {fileID: 3266246938610710320, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
+        type: 3}
+      propertyPath: _Disorder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
+        type: 3}
+      propertyPath: isDisordered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
+        type: 3}
+      propertyPath: _DirectionDisorderAmp
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
+        type: 3}
+      propertyPath: _DirectionDisorderPos
+      value: 
+      objectReference: {fileID: 1228846306}
+    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
+        type: 3}
+      propertyPath: _Width
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1949869049719538979, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9614,30 +9753,10 @@ PrefabInstance:
       propertyPath: matPropHead
       value: 
       objectReference: {fileID: 317453112}
-    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
+    - target: {fileID: 3266246938610710333, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
         type: 3}
-      propertyPath: _Disorder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
-        type: 3}
-      propertyPath: isDisordered
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
-        type: 3}
-      propertyPath: _DirectionDisorderAmp
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
-        type: 3}
-      propertyPath: _DirectionDisorderPos
-      value: 
-      objectReference: {fileID: 1228846306}
-    - target: {fileID: 3414991363741969529, guid: 39adf1f4b74bce243a70d5ce98ad9a37,
-        type: 3}
-      propertyPath: _Width
-      value: 0.1
+      propertyPath: speed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39adf1f4b74bce243a70d5ce98ad9a37, type: 3}
@@ -10051,9 +10170,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -10742,9 +10861,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -11062,9 +11181,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -11437,9 +11556,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -11462,9 +11581,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -11574,9 +11693,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -11599,9 +11718,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -12333,9 +12452,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -12823,9 +12942,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -16685,13 +16804,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668335898903}
-  m_LocalRotation: {x: -0.07775515, y: -0.7028187, z: 0.07775515, w: 0.70281875}
-  m_LocalPosition: {x: -87.80747, y: -33.523636, z: -11.594696}
+  m_LocalRotation: {x: -0.490625, y: -0.5092023, z: 0.49062505, w: 0.5092024}
+  m_LocalPosition: {x: -87.8, y: -36.1, z: -11.7}
   m_LocalScale: {x: 1.5591834, y: 1.5591834, z: 1.5591832}
   m_Children: []
   m_Father: {fileID: 634204020}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 12.626}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 87.871}
 --- !u!4 &5006512736208290078
 Transform:
   m_ObjectHideFlags: 0
@@ -26408,9 +26527,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -26452,9 +26571,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -26688,9 +26807,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -26910,9 +27029,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27056,9 +27175,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27100,9 +27219,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27163,9 +27282,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27386,9 +27505,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27430,9 +27549,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27512,9 +27631,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27601,9 +27720,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27849,9 +27968,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -27912,9 +28031,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -28288,9 +28407,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -28434,9 +28553,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -29410,9 +29529,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -29537,9 +29656,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -29690,9 +29809,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -29734,9 +29853,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -29975,9 +30094,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -30019,9 +30138,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -30381,9 +30500,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -30615,9 +30734,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -30754,9 +30873,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -31156,9 +31275,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -31200,9 +31319,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -31327,9 +31446,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -31454,9 +31573,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -31581,9 +31700,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -32232,9 +32351,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -32321,9 +32440,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0
@@ -32524,9 +32643,9 @@ MonoBehaviour:
   _Speed: 70
   _Outline: 0.001
   _Width: 1
-  _Test1: 0.1
+  _Test1: 0
   _Test2: 3.71
-  _Test3: 3.71
+  _Test3: 0
   _Disorder: 0
   isDisordered: 0
   _DirectionDisorderAmp: 0

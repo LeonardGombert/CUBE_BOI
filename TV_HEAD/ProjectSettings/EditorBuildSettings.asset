@@ -5,10 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/LeoRiggingScene.unity
-    guid: 2b87c7fde18e8fd458ccb1a24a32578a
   - enabled: 1
-    path: Assets/Scenes/FINAL COUNTDOWN.unity
-    guid: a566bcac40389a84182a6b202a200458
+    path: Assets/Scenes/_FINAL/1a_Intro.unity
+    guid: bfc54e5427b445041826586ad042286b
+  - enabled: 1
+    path: Assets/Scenes/_FINAL/1b_Intro.unity
+    guid: 313cbf701ad22a240a7e7f024b9cb50b
+  - enabled: 1
+    path: Assets/Scenes/_FINAL/2_PreGameplay.unity
+    guid: aa8880d8debb31d4fad2f7700354d509
+  - enabled: 1
+    path: Assets/Scenes/_FINAL/3_Gameplay.unity
+    guid: 89e89b72cb79e2345b00e2cf7090e625
+  - enabled: 1
+    path: Assets/Scenes/_FINAL/4_EndCutscene.unity
+    guid: 65f475db2f1a7a043882d4354b6e1bea
   m_configObjects: {}
