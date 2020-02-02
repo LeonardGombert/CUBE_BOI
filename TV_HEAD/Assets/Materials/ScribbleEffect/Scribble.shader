@@ -1,9 +1,17 @@
-﻿Shader "Custom/Shadow/Scribble"
+﻿// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
+Shader "Custom/Shadow/Scribble"
 {
 		//show values to edit in inspector
 		Properties{
 			_Color("Tint", Color) = (0, 0, 0, 1)
 			_MainTex("Texture", 2D) = "white" {}
+			_NoiseTex("_NoiseTex", 2D) = "white" {}
+			_NormalTex("_NormalTex", 2D) = "white" {}
 			[HDR] _Emission("Emission", color) = (0,0,0)
 
 			_HalftonePattern("Halftone Pattern", 2D) = "white" {}
@@ -19,24 +27,27 @@
 			_RemapOutputMin2("Remap output min value2", Range(0, 1)) = 0
 			_RemapOutputMax2("Remap output max value2", Range(0, 1)) = 1
 
-		_NoiseTex("_NoiseTex (RGB)", 2D) = "white" {}
-		_Value("Value", Float) = 1
-		_Speed("_Speed", Float) = 1
-		_Outline("_Outline", Range(0,0.01)) = 0
+		[PerRendererData]_Value("Value", Float) = 1
+		[PerRendererData]_Speed("_Speed", Float) = 1
+		[PerRendererData]_Outline("_Outline", Range(0,0.01)) = 0
 		_OutlineColor("Color", Color) = (1, 1, 1, 1)
-		_Width("Width", float) = 5
+		[PerRendererData] _Width("Width", float) = 5
 
-			_Test1("_Test1", float) = 1
-			_Test2("_Test2", float) = 1
+			[PerRendererData]_Test1("_Test1", float) = 1
+			[PerRendererData]_Test2("_Test2", float) = 1
 
-			_Disorder("Disorder", float) = 0
+			[PerRendererData]_Disorder("Disorder", float) = 0
+			[PerRendererData]_DirectionDisorder("_DirectionDisorder", Vector) = (1,1,1,1)
 
 		}
+
+
 			SubShader{
 				//the material is completely non-transparent and is rendered at the same time as the other opaque geometry
 				Tags{ "RenderType" = "Opaque" "Queue" = "Geometry"}
 
 				Name "SCRIBBLE"
+
 
 				CGPROGRAM
 
@@ -48,10 +59,11 @@
 				#pragma surface surf Halftone fullforwardshadows vertex:vert addshadow
 				//#pragma surface surf Lambert vertex:vert
 				//#pragma addshadow 
-				#pragma target 4.0
+				#pragma target 4.6
 
 				//basic properties
 				sampler2D _MainTex;
+				sampler2D _NormalTex;
 				fixed4 _Color;
 				half3 _Emission;
 
@@ -74,6 +86,15 @@
 
 				float _Disorder;
 
+				float _Test1;
+				float _Test2;
+				float _Value;
+				float _Speed;
+				float _Width;
+				float4 _OutlineColor;
+				sampler2D _NoiseTex;
+
+				float4 _DirectionDisorder;
 
 				//struct that holds information that gets transferred from surface to lighting function
 				struct HalftoneSurfaceOutput {
@@ -81,7 +102,7 @@
 					float2 ScreenPos;
 					half3 Emission;
 					fixed Alpha;
-					fixed3 Normal;
+					float3 Normal;
 					float2 uv_MainTex;
 				};
 
@@ -97,6 +118,7 @@
 				//input struct which is automatically filled by unity
 				struct Input {
 					float2 uv_MainTex;
+					float4 uv_NormalTex;
 					float2 uv;
 					float4 screenPos;
 				};
@@ -132,17 +154,12 @@
 					return col;
 				}
 
-				float _Test1;
-				float _Test2;
-				float _Value;
-				float _Speed;
-				float _Width;
-				float4 _OutlineColor;
-				sampler2D _NoiseTex;
 
 				void vert(inout appdata_full v) {
 					float4 n = tex2Dlod(_NoiseTex, float4(v.texcoord.xy, 0, 0));
-					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value, v.normal * ((sin(_Time.y * _Speed * 10 * n) + 1) * 0.5) * _Value * 10, _Disorder);
+					float3 worldNormal = normalize(mul(v.normal, (float3x3)unity_ObjectToWorld));
+					_DirectionDisorder.xyz = mul(unity_WorldToObject, _DirectionDisorder).xyz;
+					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value, (worldNormal - _DirectionDisorder) * ((sin(_Time.y * _Speed * 10 * n) + 1) * 0.5) * _Value * 10, _Disorder);
 				}
 
 				//the surface shader function which sets parameters the lighting function then uses
@@ -160,11 +177,14 @@
 					//_HalftonePattern_ST.xy = 4;
 
 
+					//o.Normal = UnpackNormal(tex2D(_NormalTex, i.uv_NormalTex)).x;
+
 					//setup screenspace UVs for lighing function
 					float aspect = _ScreenParams.x / _ScreenParams.y;
 					o.ScreenPos = i.uv_MainTex.xy;
 					o.ScreenPos = TRANSFORM_TEX(o.ScreenPos, _HalftonePattern);
 					o.ScreenPos.x = o.ScreenPos.x * aspect;
+
 				}
 				ENDCG
 				
@@ -187,6 +207,18 @@
 
 					#include "UnityCG.cginc"
 
+
+				float _Value;
+				float _Outline;
+				float _Speed;
+				float _Width;
+				float _Disorder;
+				float4 _OutlineColor;
+				float4 _DirectionDisorder;
+				sampler2D _NoiseTex;
+				sampler2D _GrabTexture;
+
+
 				struct appdata
 				{
 					float4 vertex : POSITION;
@@ -201,15 +233,6 @@
 					float4 vertex : SV_POSITION;
 					float4 uvgrab : TEXCOORD1;
 				};
-
-				float _Value;
-				float _Outline;
-				float _Speed;
-				float _Width;
-				float _Disorder;
-				float4 _OutlineColor;
-				sampler2D _NoiseTex;
-				sampler2D _GrabTexture;
 
 				v2f vert(appdata v)
 				{
@@ -229,7 +252,9 @@
 					v.vertex += float4(projectedNormal, 0);
 
 					float4 n = tex2Dlod(_NoiseTex, float4(v.uv.xy, 0, 0));
-					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline, v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline * 10 , _Disorder);
+					float3 worldNormal = normalize(mul(v.normal, (float3x3)unity_ObjectToWorld));
+					_DirectionDisorder.xyz = mul(unity_WorldToObject, _DirectionDisorder).xyz;
+					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline, (worldNormal - _DirectionDisorder) * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline * 10 , _Disorder);
 
 					o.vertex = UnityObjectToClipPos(v.vertex);
 					UNITY_TRANSFER_FOG(o,o.vertex);
@@ -245,6 +270,7 @@
 				}
 				ENDCG
 				}
+					
 			}
 				FallBack "Standard"
 		
