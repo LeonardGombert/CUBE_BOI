@@ -23,9 +23,9 @@ public class CharacterMovement : MonoBehaviour
     float xScale = .25f;
 
 
-    [SerializeField] float height;
-    [SerializeField] float height1;
-    [SerializeField] float height2;
+    float height;
+    float height1;
+    float height2;
     [SerializeField] float angleLimit;
 
 
@@ -35,21 +35,21 @@ public class CharacterMovement : MonoBehaviour
 
     //INPUT VALUES
     [SerializeField] float rotationAmount;
-    [SerializeField] float radius;
+    [SerializeField] float radius; 
+    float rightPosition;
+    float leftPosition;
 
-    [SerializeField] GameObject toMove;
+[SerializeField] GameObject toMove;
 
     //TWEEN VALUES
     public float timePassed;
-    [SerializeField] float startPosition;
-    [SerializeField] float endPosition;
+    float startPosition;
+    float endPosition;
     float change;
     float duration;
     [SerializeField] float shorterDuration;
     [SerializeField] float intitialDuration;
 
-    float rightPosition = 3.9f;
-    float leftPosition = -3.9f;
 
     bool resetTime;
     bool isCentered;
@@ -62,6 +62,9 @@ public class CharacterMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         isCentered = true;
         duration = intitialDuration;
+
+        rightPosition = radius - 0.01f;
+        leftPosition = -radius - 0.01f;
     }
 
 
@@ -70,7 +73,7 @@ public class CharacterMovement : MonoBehaviour
     {
         MyAngle();
         MyShpere();
-        toMove.transform.position = new Vector3(transform.position.x + rotationAmount, transform.position.y + Mathf.Sqrt(Mathf.Pow(radius, 2) - Mathf.Pow(rotationAmount, 2)), transform.position.z);
+        toMove.transform.position = new Vector3(transform.localPosition.x + rotationAmount, transform.localPosition.y + Mathf.Sqrt(Mathf.Pow(radius, 2) - Mathf.Pow(rotationAmount, 2)), transform.localPosition.z);
     }
 
     void MyAngle()
@@ -109,7 +112,7 @@ public class CharacterMovement : MonoBehaviour
 
     void MyShpere()
     {
-        height2 = (float)CustomScaler.Scale(height, 0, 10, -3.9f, 3.9f);
+        height2 = (float)CustomScaler.Scale(height, 0, 10, leftPosition, rightPosition);
 
         rotationAmount += height2 * Time.deltaTime;
 
