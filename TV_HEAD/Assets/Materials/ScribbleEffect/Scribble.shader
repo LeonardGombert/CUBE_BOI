@@ -5,6 +5,7 @@
 			_Color("Tint", Color) = (0, 0, 0, 1)
 			_MainTex("Texture", 2D) = "white" {}
 			_NoiseTex("_NoiseTex", 2D) = "white" {}
+			_NormalTex("_NormalTex", 2D) = "white" {}
 			[HDR] _Emission("Emission", color) = (0,0,0)
 
 			_HalftonePattern("Halftone Pattern", 2D) = "white" {}
@@ -55,6 +56,7 @@
 
 				//basic properties
 				sampler2D _MainTex;
+				sampler2D _NormalTex;
 				fixed4 _Color;
 				half3 _Emission;
 
@@ -91,7 +93,7 @@
 					float2 ScreenPos;
 					half3 Emission;
 					fixed Alpha;
-					fixed3 Normal;
+					float3 Normal;
 					float2 uv_MainTex;
 				};
 
@@ -107,6 +109,7 @@
 				//input struct which is automatically filled by unity
 				struct Input {
 					float2 uv_MainTex;
+					float4 uv_NormalTex;
 					float2 uv;
 					float4 screenPos;
 				};
@@ -163,11 +166,14 @@
 					//_HalftonePattern_ST.xy = 4;
 
 
+					//o.Normal = UnpackNormal(tex2D(_NormalTex, i.uv_NormalTex)).x;
+
 					//setup screenspace UVs for lighing function
 					float aspect = _ScreenParams.x / _ScreenParams.y;
 					o.ScreenPos = i.uv_MainTex.xy;
 					o.ScreenPos = TRANSFORM_TEX(o.ScreenPos, _HalftonePattern);
 					o.ScreenPos.x = o.ScreenPos.x * aspect;
+
 				}
 				ENDCG
 				
@@ -250,6 +256,7 @@
 				}
 				ENDCG
 				}
+					
 			}
 				FallBack "Standard"
 		
