@@ -1,4 +1,10 @@
-﻿Shader "Custom/Shadow/Scribble"
+﻿// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
+Shader "Custom/Shadow/Scribble"
 {
 		//show values to edit in inspector
 		Properties{
@@ -31,6 +37,7 @@
 			[PerRendererData]_Test2("_Test2", float) = 1
 
 			[PerRendererData]_Disorder("Disorder", float) = 0
+			[PerRendererData]_DirectionDisorder("_DirectionDisorder", Vector) = (1,1,1,1)
 
 		}
 
@@ -86,6 +93,8 @@
 				float _Width;
 				float4 _OutlineColor;
 				sampler2D _NoiseTex;
+
+				float4 _DirectionDisorder;
 
 				//struct that holds information that gets transferred from surface to lighting function
 				struct HalftoneSurfaceOutput {
@@ -148,7 +157,9 @@
 
 				void vert(inout appdata_full v) {
 					float4 n = tex2Dlod(_NoiseTex, float4(v.texcoord.xy, 0, 0));
-					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value, v.normal * ((sin(_Time.y * _Speed * 10 * n) + 1) * 0.5) * _Value * 10, _Disorder);
+					float3 worldNormal = normalize(mul(v.normal, (float3x3)unity_ObjectToWorld));
+					_DirectionDisorder.xyz = mul(unity_WorldToObject, _DirectionDisorder).xyz;
+					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Value, (worldNormal - _DirectionDisorder) * ((sin(_Time.y * _Speed * 10 * n) + 1) * 0.5) * _Value * 10, _Disorder);
 				}
 
 				//the surface shader function which sets parameters the lighting function then uses
@@ -203,6 +214,7 @@
 				float _Width;
 				float _Disorder;
 				float4 _OutlineColor;
+				float4 _DirectionDisorder;
 				sampler2D _NoiseTex;
 				sampler2D _GrabTexture;
 
@@ -240,7 +252,9 @@
 					v.vertex += float4(projectedNormal, 0);
 
 					float4 n = tex2Dlod(_NoiseTex, float4(v.uv.xy, 0, 0));
-					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline, v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline * 10 , _Disorder);
+					float3 worldNormal = normalize(mul(v.normal, (float3x3)unity_ObjectToWorld));
+					_DirectionDisorder.xyz = mul(unity_WorldToObject, _DirectionDisorder).xyz;
+					v.vertex.xyz += lerp(v.normal * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline, (worldNormal - _DirectionDisorder) * ((sin(_Time.y * _Speed * n) + 1) * 0.5) * _Outline * 10 , _Disorder);
 
 					o.vertex = UnityObjectToClipPos(v.vertex);
 					UNITY_TRANSFER_FOG(o,o.vertex);

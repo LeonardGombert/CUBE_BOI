@@ -18,6 +18,10 @@ public class MaterialProp : MonoBehaviour
     public float _Test2;
     public float _Disorder;
 
+    [Space(10)]
+    public Vector4 _DirectionDisorder;
+    public Transform _DirectionDisorderPos;
+
     void Start()
     {
         myRenderer = GetComponent<Renderer>();
@@ -27,6 +31,8 @@ public class MaterialProp : MonoBehaviour
     void Update()
     {
 
+        _DirectionDisorder = _DirectionDisorderPos.position;
+
         m_PropertyBlock.SetFloat("_Value", _Value);
         m_PropertyBlock.SetFloat("_Speed", _Speed);
         m_PropertyBlock.SetFloat("_Outline", _Outline);
@@ -34,6 +40,7 @@ public class MaterialProp : MonoBehaviour
         m_PropertyBlock.SetFloat("_Test1", _Test1);
         m_PropertyBlock.SetFloat("_Test2", _Test2);
         m_PropertyBlock.SetFloat("_Disorder", _Disorder);
+        m_PropertyBlock.SetVector("_DirectionDisorder", _DirectionDisorder);
         myRenderer.SetPropertyBlock(m_PropertyBlock);
     }
 }

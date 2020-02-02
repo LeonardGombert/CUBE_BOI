@@ -237,6 +237,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &463544590 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2500273082295789248, guid: 82a2914d8f86c62488456950c8330e38,
@@ -262,6 +264,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &468783795 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -147513085656370529, guid: 82a2914d8f86c62488456950c8330e38,
@@ -287,6 +291,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &515369241
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +409,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 1083200333}
 --- !u!1 &539220208 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1289903127975425112, guid: 82a2914d8f86c62488456950c8330e38,
@@ -428,6 +436,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &546900347 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3542482268014866670, guid: 82a2914d8f86c62488456950c8330e38,
@@ -453,6 +463,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &674260420
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +583,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &913031241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9051958163568412249, guid: 82a2914d8f86c62488456950c8330e38,
@@ -596,6 +610,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &936491872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8147464527811412559, guid: bb7abaadeae445b4c87276a3558d9189,
@@ -621,6 +637,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 1083200333}
 --- !u!1 &1068527140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 749881036006503108, guid: 82a2914d8f86c62488456950c8330e38,
@@ -646,6 +664,100 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
+--- !u!1 &1083200329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083200333}
+  - component: {fileID: 1083200332}
+  - component: {fileID: 1083200331}
+  - component: {fileID: 1083200330}
+  m_Layer: 0
+  m_Name: Sphere (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &1083200330
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083200329}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1083200331
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083200329}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1083200332
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083200329}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1083200333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083200329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.317, y: 0.508543, z: -1.567}
+  m_LocalScale: {x: 0.3521, y: 0.3521, z: 0.3521}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1142398864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2579366883801555686, guid: 82a2914d8f86c62488456950c8330e38,
@@ -671,6 +783,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1185858573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -512466131837287413, guid: 82a2914d8f86c62488456950c8330e38,
@@ -696,6 +810,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1207346481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8693572986977947079, guid: 82a2914d8f86c62488456950c8330e38,
@@ -721,6 +837,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1220992097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7099545818986981687, guid: 82a2914d8f86c62488456950c8330e38,
@@ -746,6 +864,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1259673481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5158534241788352043, guid: 82a2914d8f86c62488456950c8330e38,
@@ -771,6 +891,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1381689301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4123683315681158281, guid: 82a2914d8f86c62488456950c8330e38,
@@ -796,6 +918,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1458032322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 464376057828312154, guid: 82a2914d8f86c62488456950c8330e38,
@@ -821,6 +945,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1472362148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 160978103796633952, guid: 82a2914d8f86c62488456950c8330e38,
@@ -846,6 +972,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1497041421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3384896052656666637, guid: 82a2914d8f86c62488456950c8330e38,
@@ -871,6 +999,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1549730210 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6698897978249692199, guid: 82a2914d8f86c62488456950c8330e38,
@@ -896,6 +1026,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1631193579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1145,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1696350720 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5713517130265984417, guid: 82a2914d8f86c62488456950c8330e38,
@@ -1038,6 +1172,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1717539855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2053500478716010104, guid: 82a2914d8f86c62488456950c8330e38,
@@ -1063,6 +1199,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1754306814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7301616336294391467, guid: 82a2914d8f86c62488456950c8330e38,
@@ -1088,6 +1226,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &1784029739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1544,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1001 &2062844335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1523,6 +1665,8 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
 --- !u!1 &2128358536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5893458181935738418, guid: 82a2914d8f86c62488456950c8330e38,
@@ -1548,3 +1692,5 @@ MonoBehaviour:
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+  _DirectionDisorder: {x: 0, y: 0, z: 0, w: 0}
+  _DirectionDisorderPos: {fileID: 0}
