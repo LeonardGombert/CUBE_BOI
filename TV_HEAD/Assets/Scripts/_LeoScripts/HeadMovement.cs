@@ -8,7 +8,7 @@ public class HeadMovement : MonoBehaviour
     public Vector3 startPoint;
     public Vector3 endPoint;
 
-    public float forceValue = 1;
+    public float forceValue;
 
     public Rigidbody rb;
     public SpringJoint springJoint;
@@ -20,6 +20,12 @@ public class HeadMovement : MonoBehaviour
     float change;
     public float tweenDuration;
     public float weakSpringValue;
+
+    Vector3 firstPressPos;
+    Vector3 secondPressPos;
+    Vector3 currentSwipe;
+
+    public GameObject targetObject;
 
     // Start is called before the first frame update
     void Start()
@@ -33,20 +39,29 @@ public class HeadMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.forward * z + transform.right * x;
 
-
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
-            forceValue += 100f;
+            //save began touch 2d point
+            firstPressPos = new Vector3(Input.mousePosition.x, 0, Input.mousePosition.z);
         }
-
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetMouseButtonUp(0))
         {
-            rb.AddForce(move * forceValue * Time.deltaTime, ForceMode.VelocityChange);
+            //save ended touch 2d point
+            secondPressPos = new Vector3(Input.mousePosition.x, 0, Input.mousePosition.z);
+
+            //create vector from the two points
+            currentSwipe = new Vector3(secondPressPos.x - firstPressPos.x, 0, secondPressPos.z - firstPressPos.z);
+
+            currentSwipe.Normalize();
+
+            rb.AddForce(currentSwipe * forceValue * Time.deltaTime, ForceMode.VelocityChange);
+            targetObject.transform.rotation = Quaternion.AngleAxis(45, new Vector3(0, 0, 1));
+            //targetObject.gameObject.transform.Rotate(45, 45, 45, Space.World);
             struckBall = true;
-            forceValue = 1;
         }
+
+        Vector3 move = transform.forward * z + transform.right * x;
 
         if (struckBall) increaseSpringJoint();
     }
