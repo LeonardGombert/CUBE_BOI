@@ -210,7 +210,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321217534 stripped
 GameObject:
@@ -233,7 +233,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -259,7 +258,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -285,7 +283,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -379,8 +376,33 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 34.381, y: -30.000002, z: 0}
+--- !u!1 &517402984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1090509125931450046, guid: bb7abaadeae445b4c87276a3558d9189,
+    type: 3}
+  m_PrefabInstance: {fileID: 2062844335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &517402986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517402984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf08544dd5f5d8440bc1b8414440400c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Value: 0.0003
+  _Speed: 70
+  _Outline: 0.001
+  _Width: 1
+  _Test1: 0.1
+  _Test2: 3.71
+  _Disorder: 0
 --- !u!1 &539220208 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1289903127975425112, guid: 82a2914d8f86c62488456950c8330e38,
@@ -402,7 +424,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -428,7 +449,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -524,7 +544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899961575 stripped
 GameObject:
@@ -547,7 +567,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -573,7 +592,31 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
+  _Width: 1
+  _Test1: 0.1
+  _Test2: 3.71
+  _Disorder: 0
+--- !u!1 &936491872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8147464527811412559, guid: bb7abaadeae445b4c87276a3558d9189,
+    type: 3}
+  m_PrefabInstance: {fileID: 2062844335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &936491874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936491872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf08544dd5f5d8440bc1b8414440400c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Value: 0.0003
+  _Speed: 70
+  _Outline: 0.0005
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -599,7 +642,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -625,7 +667,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -651,7 +692,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -677,7 +717,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -703,7 +742,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -729,7 +767,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -755,7 +792,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -781,7 +817,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -807,7 +842,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -833,7 +867,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -859,7 +892,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -954,7 +986,7 @@ Transform:
   m_LocalScale: {x: 0.68521, y: 0.68521, z: 0.68521}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694371396 stripped
 GameObject:
@@ -977,7 +1009,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -1003,7 +1034,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -1029,7 +1059,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -1055,7 +1084,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -1202,7 +1230,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.875
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38,
         type: 3}
@@ -1212,7 +1240,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.539
+      value: -3.24
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38,
         type: 3}
@@ -1237,7 +1265,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38,
         type: 3}
@@ -1372,11 +1400,104 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
   _Disorder: 0
+--- !u!1001 &2062844335
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_Name
+      value: Igor_RIG_symetric
+      objectReference: {fileID: 0}
+    - target: {fileID: -6123279561042469037, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99fc3d8b9a80c4e4d8c3e06aec5356d5, type: 2}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.476
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.861
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8672019
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49795666
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 120.270004
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.6517
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.6517
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.6517
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920775422171306301, guid: bb7abaadeae445b4c87276a3558d9189,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99fc3d8b9a80c4e4d8c3e06aec5356d5, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb7abaadeae445b4c87276a3558d9189, type: 3}
 --- !u!1 &2101900594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 457233203367459360, guid: 82a2914d8f86c62488456950c8330e38,
@@ -1398,7 +1519,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71
@@ -1424,7 +1544,6 @@ MonoBehaviour:
   _Value: 0.001
   _Speed: 65.6
   _Outline: 0.0013
-  _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
   _Width: 1
   _Test1: 0.1
   _Test2: 3.71

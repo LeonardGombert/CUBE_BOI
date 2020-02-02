@@ -32,11 +32,14 @@
 			[PerRendererData]_Disorder("Disorder", float) = 0
 
 		}
+
+
 			SubShader{
 				//the material is completely non-transparent and is rendered at the same time as the other opaque geometry
 				Tags{ "RenderType" = "Opaque" "Queue" = "Geometry"}
 
 				Name "SCRIBBLE"
+
 
 				CGPROGRAM
 
@@ -48,7 +51,7 @@
 				#pragma surface surf Halftone fullforwardshadows vertex:vert addshadow
 				//#pragma surface surf Lambert vertex:vert
 				//#pragma addshadow 
-				#pragma target 4.0
+				#pragma target 4.6
 
 				//basic properties
 				sampler2D _MainTex;
